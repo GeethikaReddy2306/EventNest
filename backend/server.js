@@ -21,7 +21,12 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/bookings', bookingRoutes);
-
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "EventNest Backend is running successfully!"
+  });
+});
 // Database Connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB Connected'))
