@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://event-nest-seven.vercel.app/api',
+    baseURL: 'https://event-nest-ten.vercel.app/api',
 });
 
 api.interceptors.request.use((config) => {
